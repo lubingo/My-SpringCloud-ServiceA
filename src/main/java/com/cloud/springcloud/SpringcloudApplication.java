@@ -3,6 +3,7 @@ package com.cloud.springcloud;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -11,8 +12,8 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.sql.DataSource;
 
-@SpringBootApplication
 @EnableDiscoveryClient
+@SpringBootApplication
 public class SpringcloudApplication  implements ApplicationContextAware {
     @Bean
     public RestTemplate restTemplate(){
@@ -20,7 +21,7 @@ public class SpringcloudApplication  implements ApplicationContextAware {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudApplication.class, args);
+        new SpringApplicationBuilder(SpringcloudApplication.class).web(true).run(args);
     }
     private static ApplicationContext context;
 

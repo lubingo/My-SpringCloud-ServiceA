@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="My-SpringCloud-ServiceA" options="-parameters" />
+      <module name="My-SpringCloud-ServiceA" options="" />
     </option>
   </component>
 </project>
