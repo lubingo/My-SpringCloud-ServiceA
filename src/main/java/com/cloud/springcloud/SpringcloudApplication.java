@@ -21,7 +21,7 @@ public class SpringcloudApplication  implements ApplicationContextAware {
     }
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(SpringcloudApplication.class).web(true).run(args);
+        SpringApplication.run(SpringcloudApplication.class, args);
     }
     private static ApplicationContext context;
 
